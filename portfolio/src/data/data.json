@@ -1,0 +1,36 @@
+{
+  "title": "Hello, I'm a Frontend Developer",
+  "description": "Fond of creating web application designs and bring them to life using code & develop mobile designs",
+  "skills": [
+    {
+      "logo": "github",
+      "title": "Git Version Control",
+      "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout"
+    },
+    {
+      "logo": "mobile",
+      "title": "App Desing",
+      "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout"
+    },
+    {
+      "logo": "backend",
+      "title": "Backend Development",
+      "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout"
+    },
+    {
+      "logo": "web",
+      "title": "Web Development",
+      "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout"
+    },
+    {
+      "logo": "camera",
+      "title": "Photography",
+      "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout"
+    },
+    {
+      "logo": "freelancing",
+      "title": "Freelancing",
+      "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout"
+    }
+  ]
+}

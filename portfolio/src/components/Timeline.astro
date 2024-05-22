@@ -1,0 +1,28 @@
+---
+interface Props {
+  active: number;
+}
+
+const { active } = Astro.props;
+
+const limit = 3;
+---
+
+<div class="hidden lg:flex flex-col">
+  {
+    [...Array(limit)].map((_, index) => (
+      <>
+        <div
+          class:list={[
+            "h-5 w-5 rounded-full",
+            { "border-2 border-red-600": active !== index + 1 },
+            { "bg-red-500": active === index + 1 },
+          ]}
+        />
+        {index !== limit - 1 && (
+          <div class="h-12 border-l self-center border-light" />
+        )}
+      </>
+    ))
+  }
+</div>

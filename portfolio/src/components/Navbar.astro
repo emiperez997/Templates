@@ -1,0 +1,88 @@
+---
+const links = [
+  {
+    name: "Home",
+    href: "#home",
+  },
+  {
+    name: "Services",
+    href: "#services",
+  },
+  {
+    name: "About",
+    href: "#about",
+  },
+  {
+    name: "Skills",
+    href: "#skills",
+  },
+  {
+    name: "Portfolio",
+    href: "#portfolio",
+  },
+  {
+    name: "Contact",
+    href: "#contact",
+  },
+];
+---
+
+<nav class="w-full bg-dark text-white flex justify-center">
+  <div
+    class="w-full xl:w-[1250px] flex-col md:flex-row flex justify-between items-center py-5 px-28"
+  >
+    <div class="w-full flex justify-between">
+      <h1 class="w-full product-sans-bold font-bold text-xl">
+        amog<span class="text-red-500">o</span>e
+      </h1>
+
+      <button
+        data-collapse-toggle="navbar-default"
+        type="button"
+        class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+        aria-controls="navbar-default"
+        aria-expanded="false"
+      >
+        <svg
+          class="w-5 h-5"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 17 14"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M1 1h15M1 7h15M1 13h15"></path>
+        </svg>
+      </button>
+    </div>
+
+    <div
+      class="navbar flex-col md:flex-row justify-center items-center hidden w-full md:flex gap-5"
+    >
+      {
+        links.map(({ name, href }) => (
+          <a
+            href={href}
+            class="text-sm hover:text-red-500 transition-all ease-in-out"
+          >
+            {name}
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</nav>
+
+<script>
+  const nav = document.querySelector(".navbar");
+  const button = document.querySelector("button");
+
+  button.addEventListener("click", () => {
+    nav.classList.toggle("hidden");
+    nav.classList.toggle("flex");
+  });
+</script>

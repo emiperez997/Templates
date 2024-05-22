@@ -1,0 +1,41 @@
+---
+import { skills } from "../data/data.json";
+---
+
+<div class="flex flex-wrap xl:grid xl:grid-cols-3 gap-10 relative">
+  {
+    skills.map(({ logo, title, description }) => (
+      <div class="flex flex-col gap-4 bg-gray-800 text-light p-5 lg:w-80 skill-card relative">
+        <img src={`/logos/${logo}.svg`} alt={title} class="h-16 w-16" />
+
+        <h3 class="font-bold ">{title}</h3>
+
+        <p class="text-sm">{description}</p>
+      </div>
+    ))
+  }
+</div>
+
+<style>
+  .skill-card {
+  }
+
+  .skill-card::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 10px;
+    z-index: -1;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .skill-card:hover::after {
+    background-color: rgba(0, 0, 0, 0.05);
+    scale: 1.2;
+    padding: 100px 0;
+  }
+</style>
